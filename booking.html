@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday Resort</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="image/resort.png" type="image/png">
+</head>
+<body style="background-color:antiquewhite;">
+  <div class="container-fluid">
+ <!--navbar-->
+ <nav class="navbar navbar-expand-md navbar-dark bg-success fixed-top">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sunday Resort</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+          <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">หน้าหลัก</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="room.html">ข้อมูลห้องพัก</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="#">จองห้องพัก</a>
+              </li>
+          </ul>
+          <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-warning" type="button">ค้นหา</button>
+          </form>
+      </div>
+  </div>
+</nav>
+
+<!--carousel-->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="container-fluid">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="image/R1.jpg" alt="R1" class="d-block" style="height: 500px; width: 100%;">
+        <div class="carousel-caption">
+          <h3>รีสอร์ท</h3>
+          <p>หาดทุ่งวัวแล่น ชุมพร</p>
+        </div>  
+      </div>
+      <div class="carousel-item">
+        <img src="image/R2.jpg" alt="R2" class="d-block" style="height: 500px; width: 100%;">
+        <div class="carousel-caption">
+          <h3>สระน้ำ</h3>
+          <p>หาดทุ่งวัวแล่น ชุมพร</p>
+        </div>  
+      </div>
+      <div class="carousel-item">
+        <img src="image/R3.jpg" alt="R3" class="d-block" style="height: 500px; width: 100%;">
+        <div class="carousel-caption">
+          <h3>กิจกรรม</h3>
+          <p>หาดทุ่งวัวแล่น ชุมพร</p>
+        </div>  
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<div class="container-fluid" style="margin-top: 80px; padding-left: 50px; padding-right: 50px; margin-bottom: 80px;">
+  <div>
+    <h2 class="text-center text-success">จองห้องพัก</h2>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <form action="https://httpbin.org/post" method="POST">
+    <!-- ชื่อ-สกุล -->
+      <div class="mb-3">
+        <div class="row">
+        <div class="col-12 col-md-6">
+        <label for="Firstname" class="form-label">ชื่อ</label>
+          <input type="text" class="form-control" id="Firstname" name="Firstname" placeholder="กรุณากรอกชื่อ" required>
+          <div class="invalid-feedback">กรุณากรอกชื่อ</div></div>
+        <div class="col-12 col-md-6">
+        <label for="Lastname" class="form-label">นามสกุล</label>
+          <input type="text" class="form-control" id="Lastname" name="Lastname" placeholder="กรุณากรอกนามสกุล" required>
+          <div class="invalid-feedback">กรุณากรอกนามสกุล</div></div>
+      </div>
+    </div>
+
+    <!-- เบอร์ติดต่อ -->
+    <div class="mb-3">
+      <label for="phoneNumber" class="form-label">เบอร์ติดต่อ</label>
+      <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="กรุณากรอกเบอร์ติดต่อ" required>
+      <div class="invalid-feedback">กรุณากรอกเบอร์ติดต่อ</div>
+    </div>
+
+    <!-- E-mail -->
+    <div class="mb-3">
+      <label for="email" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="กรุณากรอกอีเมล" required>
+      <div class="invalid-feedback">กรุณากรอกอีเมลที่ถูกต้อง</div>
+    </div>
+
+    <!-- ส่วนแสดงชื่อห้องพักและรูปภาพ -->
+    <div class="mb-3">
+      <label for="room" class="form-label">เลือกห้องพัก</label>
+      <div class="row">
+        <!-- Standard Room -->
+        <div class="col-12 col-md-4">
+          <div class="room-option">
+            <input type="radio" id="roomStandard" name="room" value="Standard" required>Standard
+            <label for="roomStandard">
+              <img src="image/Standard.jpg" alt="Standard Room" style="width: 100%; height: auto;">
+            </label>
+          </div>
+        </div>
+        <!-- Deluxe Room -->
+        <div class="col-12 col-md-4">
+          <div class="room-option">
+            <input type="radio" id="roomDeluxe" name="room" value="Deluxe" required>Deluxe
+            <label for="roomDeluxe">
+              <img src="image/Deluxe.png" alt="Deluxe Room" style="width: 100%; height: auto;">
+              
+            </label>
+          </div>
+        </div>
+        <!-- Suite Room -->
+        <div class="col-12 col-md-4">
+          <div class="room-option">
+            <input type="radio" id="roomSuite" name="room" value="Suite" required>Suite
+            <label for="roomSuite">
+              <img src="image/Suite.jpg" alt="Suite Room" style="width: 100%; height: auto;">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="invalid-feedback">กรุณาเลือกห้องพัก</div>
+    </div>
+
+    <!-- วันที่เข้าพักและวันที่ออก -->
+    <div class="mb-3">
+      <label for="checkInDate" class="form-label">วันที่เข้าพัก (Check-in)</label>
+      <input type="date" class="form-control" id="checkInDate" name="checkInDate" required>
+      <div class="invalid-feedback">กรุณากรอกวันที่เข้าพัก</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="checkOutDate" class="form-label">วันที่ออก (Check-out)</label>
+      <input type="date" class="form-control" id="checkOutDate" name="checkOutDate" required>
+      <div class="invalid-feedback">กรุณากรอกวันที่ออก</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">ยืนยันการจอง</button>
+    </div>
+  </form>
+</div>
+
+<div style="margin-top: 50px;">
+  <footer class="bg-success text-white py-4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 text-center mb-2">
+          <h5 class="m-0">ซันเดย์รีสอร์ท หาดทุ่งวัวแล่น ชุมพร</h5>
+        </div>
+        <div class="col-12 text-center">
+          <h6 class="m-0">Line: <strong>SundayResortTH</strong> | Tel: <strong>094-804-6236</strong></h6>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.room-card {
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 12px; /* Slightly more rounded corners */
+    overflow: hidden;
+    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s ease-in-out; /* Increased time for a slower effect */
+  }
+  
+  .room-card:hover {
+    transform: scale(1.05); /* Slightly larger zoom for a smoother effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Softer and spread-out shadow */
+  }
+  
+  .room-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1); /* Slower transition for image zoom */
+  }
+  
+  .room-card:hover .room-image {
+    transform: scale(1.1); /* Slightly larger zoom on hover for a smoother look */
+  }
